@@ -210,7 +210,8 @@ connection_opts(_Args, {url, DatabaseUrl}) ->
                 username => User,
                 password => Pass,
                 host => Host,
-                database => string:slice(Path, 1)
+                database => string:slice(Path, 1),
+                timeout => 30000
             },
 
             case maps:get(query, Map, []) of
